@@ -17,7 +17,7 @@ public class AccountController {
     public List<Account> getAllAccounts() { return accountService.getAllAccounts(); }
 
     @RequestMapping(value="/accounts/login", method = RequestMethod.POST)
-    public Account getAccount(@PathVariable Map<String, String> payload) { return accountService.login(payload.get("username"), payload.get("password")); }
+    public Account login(@RequestBody Map<String, String> payload) { return accountService.login(payload.get("username"), payload.get("password")); }
 
     @RequestMapping(value="/accounts/add", method = RequestMethod.POST)
     public Account addAccount(@RequestBody Account account) { return accountService.addAccount(account); }
