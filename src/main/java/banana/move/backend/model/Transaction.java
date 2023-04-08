@@ -1,11 +1,13 @@
 package banana.move.backend.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity(name="transaction")
 public class Transaction {
     @Id
+    @GeneratedValue
     private int transaction_id;
     private int acct_id;
     private String address;
