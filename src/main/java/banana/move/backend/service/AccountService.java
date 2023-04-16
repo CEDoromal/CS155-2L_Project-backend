@@ -17,6 +17,9 @@ public class AccountService {
     public List<Account> getAllAccounts() {
         List<Account> accountRecords = new ArrayList<>();
         accountRepository.findAll().forEach(accountRecords::add);
+        for (Account account : accountRecords) {
+            account.setPassword("");
+        }
         return accountRecords;
     }
 
@@ -32,7 +35,9 @@ public class AccountService {
     {
         Optional<Account> account = accountRepository.findByUsernameAndPassword(username, password);
         if(account.isPresent()) {
-            return account.get();
+            Account result = account.get();
+            result.setPassword("");
+            return result;
         }
         else
             return null;
