@@ -4,33 +4,37 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity(name="transaction")
-public class Transaction {
+@Entity(name="order")
+public class Order {
     @Id
     @GeneratedValue
-    private int transaction_id;
+    private int order_id;
     private int acct_id;
+    private String fullName;
+    private String products;
     private String address;
     private int total_price;
     private String status;
 
-    public Transaction() {
+    public Order() {
     }
 
-    public Transaction(int transaction_id, int acct_id, String address, int total_price, String status) {
-        this.transaction_id = transaction_id;
+    public Order(int order_id, int acct_id, String fullName, String products, String address, int total_price, String status) {
+        this.order_id = order_id;
         this.acct_id = acct_id;
+        this.fullName = fullName;
+        this.products = products;
         this.address = address;
         this.total_price = total_price;
         this.status = status;
     }
 
-    public int getTransaction_id() {
-        return transaction_id;
+    public int getOrder_id() {
+        return order_id;
     }
 
-    public void setTransaction_id(int transaction_id) {
-        this.transaction_id = transaction_id;
+    public void setOrder_id(int order_id) {
+        this.order_id = order_id;
     }
 
     public int getAcct_id() {
@@ -39,6 +43,22 @@ public class Transaction {
 
     public void setAcct_id(int acct_id) {
         this.acct_id = acct_id;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getProducts() {
+        return products;
+    }
+
+    public void setProducts(String products) {
+        this.products = products;
     }
 
     public String getAddress() {

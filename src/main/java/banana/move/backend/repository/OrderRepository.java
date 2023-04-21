@@ -1,9 +1,9 @@
 package banana.move.backend.repository;
 
-import banana.move.backend.model.Transaction;
+import banana.move.backend.model.Order;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TransactionRepository extends CrudRepository<Transaction, Integer> {
+public interface OrderRepository extends CrudRepository<Order, Integer> {
 }
