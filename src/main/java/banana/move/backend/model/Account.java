@@ -10,7 +10,7 @@ public class Account {
 
     @Id
     @GeneratedValue
-    private int acct_id;
+    private int acctId;
     @Column(unique=true)
     private String username;
     private String password;
@@ -18,19 +18,19 @@ public class Account {
 
     public Account(){}
 
-    public Account(int acct_id, String username, String password, String type) {
-        this.acct_id = acct_id;
+    public Account(int acctId, String username, String password, String type) {
+        this.acctId = acctId;
         this.username = username;
         this.password = password;
         this.type = type;
     }
 
-    public int getAcct_id() {
-        return acct_id;
+    public int getAcctId() {
+        return acctId;
     }
 
-    public void setAcct_id(int acct_id) {
-        this.acct_id = acct_id;
+    public void setAcctId(int acctId) {
+        this.acctId = acctId;
     }
 
     public String getUsername() {

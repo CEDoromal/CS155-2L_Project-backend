@@ -44,4 +44,10 @@ public class OrderService {
             orderRepository.delete(order.get());
         }
     }
+
+    public List<Order> getAllOrdersByAccountID(int acctId) {
+        List<Order> orderRecords = new ArrayList<>();
+        orderRepository.findAllByAcctId(acctId).forEach(orderRecords::add);
+        return orderRecords;
+    }
 }

@@ -26,4 +26,7 @@ public class OrderController {
 
     @RequestMapping(value="/orders/delete/{id}", method = RequestMethod.DELETE)
     public void deleteOrder(@PathVariable int id) { orderService.deleteOrder(id); }
+
+    @RequestMapping(value="/accounts/{id}/orders")
+    public List<Order> getAllOrdersByAccountID(@PathVariable int id) { return orderService.getAllOrdersByAccountID(id); }
 }

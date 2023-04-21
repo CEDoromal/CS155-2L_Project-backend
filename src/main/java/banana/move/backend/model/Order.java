@@ -8,41 +8,43 @@ import javax.persistence.Id;
 public class Order {
     @Id
     @GeneratedValue
-    private int order_id;
-    private int acct_id;
+    private int orderId;
+    private int acctId;
     private String fullName;
     private String products;
     private String address;
-    private int total_price;
+    private int totalPrice;
+    private String paymentMethod;
     private String status;
 
     public Order() {
     }
 
-    public Order(int order_id, int acct_id, String fullName, String products, String address, int total_price, String status) {
-        this.order_id = order_id;
-        this.acct_id = acct_id;
+    public Order(int orderId, int acctId, String fullName, String products, String address, int totalPrice, String paymentMethod, String status) {
+        this.orderId = orderId;
+        this.acctId = acctId;
         this.fullName = fullName;
         this.products = products;
         this.address = address;
-        this.total_price = total_price;
+        this.totalPrice = totalPrice;
+        this.paymentMethod = paymentMethod;
         this.status = status;
     }
 
-    public int getOrder_id() {
-        return order_id;
+    public int getOrderId() {
+        return orderId;
     }
 
-    public void setOrder_id(int order_id) {
-        this.order_id = order_id;
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 
-    public int getAcct_id() {
-        return acct_id;
+    public int getAcctId() {
+        return acctId;
     }
 
-    public void setAcct_id(int acct_id) {
-        this.acct_id = acct_id;
+    public void setAcctId(int acctId) {
+        this.acctId = acctId;
     }
 
     public String getFullName() {
@@ -69,12 +71,20 @@ public class Order {
         this.address = address;
     }
 
-    public int getTotal_price() {
-        return total_price;
+    public int getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setTotal_price(int total_price) {
-        this.total_price = total_price;
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
     public String getStatus() {

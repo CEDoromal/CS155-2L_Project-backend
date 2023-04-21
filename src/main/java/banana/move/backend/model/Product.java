@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class Product {
     @Id
     @GeneratedValue
-    private int prod_id;
+    private int prodId;
     private String name;
     private int price;
     private String image;
@@ -16,19 +16,19 @@ public class Product {
     public Product() {
     }
 
-    public Product(int prod_id, String name, int price, String image) {
-        this.prod_id = prod_id;
+    public Product(int prodId, String name, int price, String image) {
+        this.prodId = prodId;
         this.name = name;
         this.price = price;
         this.image = image;
     }
 
-    public int getProd_id() {
-        return prod_id;
+    public int getProdId() {
+        return prodId;
     }
 
-    public void setProd_id(int prod_id) {
-        this.prod_id = prod_id;
+    public void setProdId(int prodId) {
+        this.prodId = prodId;
     }
 
     public String getName() {
