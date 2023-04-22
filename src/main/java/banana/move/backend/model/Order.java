@@ -3,6 +3,7 @@ package banana.move.backend.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Entity(name="order")
 public class Order {
@@ -11,6 +12,7 @@ public class Order {
     private int orderId;
     private int acctId;
     private String fullName;
+    @Lob
     private String products;
     private String address;
     private int totalPrice;
